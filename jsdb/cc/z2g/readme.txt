@@ -1,0 +1,1 @@
+7k han-zi is converted to fantizi or jiaguwen.

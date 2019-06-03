@@ -1,0 +1,82 @@
+<html>
+
+<header>
+
+<script language="javascript" src="./_inc_biblePinyin.js"></script>
+<script language="javascript">inc_biblePinyin("./");</script>
+
+<script type="text/javascript">
+
+function getall(){
+    var str="";
+    var i=0;
+    var LongestVers="";
+    var ShortestVers="----------------------------------------------------";
+    
+    var Tmp = new Object();
+    var iDup=0;
+    for (key in P ) {
+        if (undefined != Tmp.key ) {
+            Tmp.key+=1;
+            iDup+=1;
+            //alert(i + ":duplicate: "+key+","+Tmp.key);
+        }
+        else{
+            Tmp.key=0;
+        }
+        var s = P[key];
+        if (s.length=0) alert(key);
+        if( s.length > LongestVers.length-key.length) LongestVers  = key+":"+s;
+        if( s.length < ShortestVers.length-key.length) ShortestVers= key+":"+s;
+        
+        str+=i + " : "+ key+"="+P[key]+"<br>"    ;
+        i++;
+    }
+    //alert();
+    document.getElementById("test").innerHTML =dbgout_inc_BiblePinyin+"<hr/>";
+    document.getElementById("test").innerHTML +="iDup:"+iDup+"<br>";
+    document.getElementById("test").innerHTML +="longest:"+LongestVers+"<br>";
+    document.getElementById("test").innerHTML +="Shortest:"+ShortestVers+"<br>";
+    document.getElementById("test").innerHTML += str +"<br>";
+    alert(iDup);
+}
+function getallkeys(){
+    var str="";
+    var i=0;
+    var LongestVers="";
+    var ShortestVers="----------------------------------------------------";
+    
+    var Tmp = new Object();
+    var iDup=0;
+    for (key in P ) {
+        if (undefined != Tmp.key ) {
+            Tmp.key+=1;
+            iDup+=1;
+            //alert(i + ":duplicate: "+key+","+Tmp.key);
+        }
+        else{
+            Tmp.key=0;
+        }
+        var s = P[key];
+        if (s.length=0) alert(key);
+        if( s.length > LongestVers.length-key.length) LongestVers  = key+":"+s;
+        if( s.length < ShortestVers.length-key.length) ShortestVers= key+":"+s;
+        
+        str+=i + " : "+ key+"<br>"    ;
+        i++;
+    }
+    //alert();
+    document.getElementById("test").innerHTML +=dbgout_inc_BiblePinyin+"<hr/>iDup:"+iDup+"<br>";
+    document.getElementById("test").innerHTML +="longest:"+LongestVers+"<br>";
+    document.getElementById("test").innerHTML +="Shortest:"+ShortestVers+"<br>";
+    document.getElementById("test").innerHTML += str;
+    alert(iDup);
+}
+</script>
+</header>
+<body>
+official vers 31103 or 31104. we had 31101.
+<a id="test"/>
+<button onclick="getall()">getall</button><button onclick="getallkeys()">getallkeys</button>
+</body>
+</html>

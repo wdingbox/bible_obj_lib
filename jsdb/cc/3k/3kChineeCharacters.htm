@@ -1,0 +1,60 @@
+<html>
+<head>
+
+
+    <TITLE>7</TITLE>
+    <META http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <SCRIPT language="javascript" src="W_00.unicode.js">
+    </SCRIPT>
+    <SCRIPT language="javascript" src="W_01.unicode.js">
+    </SCRIPT>
+
+
+    <script type="text/javascript">
+    var total=0;
+    var max_pinying=0;
+    var max_pinyin_string="";
+    function GetAll()
+    {       
+        var i=0;
+        var TotChineseChar=0;
+        var s = "";
+        for(i=0;i < W.length;i+=1){
+            var ss=W[i];
+            var spt = ss.split(" ");
+            total+=spt[1].length;
+            if(max_pinying < spt[1].length){
+                max_pinying=spt[1].length;
+                max_pinyin_string=spt[1];
+            }
+            s+="S."+spt[0]+"=\""+spt[1]+"\";<br/>";
+        }
+        return s;
+    }
+
+    function displayDate()
+    {   
+        document.getElementById("demo").innerHTML =GetAll() +"<br>"+total+"<br>"+max_pinyin_string+max_pinying;
+    }
+    
+
+    
+    </script>
+                   
+                                    
+</script>
+</head>
+
+<body onload="displayDate()">
+
+<h1>3k Chinese Characters</h1>
+<p id="demo">
+7809 chinese words in BIble.
+</p>
+
+<button type="button" onclick="displayDate()">Display</button>
+
+</body>
+
+</html>
+

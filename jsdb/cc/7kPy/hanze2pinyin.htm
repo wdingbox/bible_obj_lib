@@ -1,0 +1,120 @@
+<html>
+<head>
+
+
+    <TITLE>7</TITLE>
+    <META http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <SCRIPT language="javascript" src="Py00.unicode.js">
+    </SCRIPT>
+    <SCRIPT language="javascript" src="Py01.unicode.js">
+    </SCRIPT>
+
+
+    <script type="text/javascript">
+
+
+    function chineseChar2pinyin()
+    {
+        var Pinyin = new Object();
+        var i=0;
+        var TotChineseChar=0;
+        var s = "";
+        for (key in Y) { //key is pinyin
+            
+            TotChineseChar+= Y[key].length;
+            for(var k=0; k<Y[key].length; k++){
+               var unicode = Y[key].charCodeAt(k);
+               //s+= i + " : " + unicode + Y[key].charAt(k) + "=" + key + "<br>\n";
+               //i+=1;
+               
+               if( Pinyin[unicode] == undefined ){
+                  Pinyin[unicode] = key;
+               }
+               else{
+                  Pinyin[unicode] += ","+key;
+               }
+            }
+        }
+        for (icode in Pinyin) { //key is pinyin
+         var cHanzi = String.fromCharCode(icode);
+         //s+=i+":"+icode + cHanzi + "==" + Pinyin[icode]  + "<br>\n";
+         s+="("+icode +  ",'" + Pinyin[icode]  + "'),<br>\n";
+         i+=1;
+        }
+        s+="(00,'0');<br>\n";
+        
+        return s;
+    }
+    function displayDate()
+    {   
+        var pinyin="shi4";
+        var testChineses=Y[pinyin];
+        if ( Y[pinyin] == undefined ) {
+            alert("");
+        }
+       
+        document.getElementById("demo").innerHTML =chineseChar2pinyin() ;
+
+    }
+    </script>
+</head>
+<body>
+
+<div>
+-- NOTES:<br>
+-- Copy All into a txt file: zid_unicode_pinyin.sql  <br>
+-- phpMySql can import this file into db.  <br><br><br>
+
+
+
+-- phpMyAdmin SQL Dump  <br>
+-- version 3.3.8<br>
+-- http://www.phpmyadmin.net<br>
+--<br>
+-- Host: localhost<br>
+-- Generation Time: Aug 08, 2012 at 07:33 PM<br>
+-- Server version: 5.1.51<br>
+-- PHP Version: 5.3.3<br>
+<br><br><br>
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";<br>
+<br><br>
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;<br>
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;<br>
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;<br>
+/*!40101 SET NAMES utf8 */;<br><br>
+
+--<br>
+-- Database: `Jiaguwen`<br>
+--<br><br>
+
+-- --------------------------------------------------------<br><br>
+
+--<br>
+-- Table structure for table `Zid2pinyin`<br>
+--<br><br>
+
+CREATE TABLE IF NOT EXISTS `Zid2pinyin` (<br>
+  `zid` int(11) NOT NULL,<br>
+  `pinyins` varchar(50) NOT NULL,<br>
+  PRIMARY KEY (`zid`)<br>
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 ;<br><br>
+
+--<br>
+-- Dumping data for table `ttt`<br>
+--<br><br>
+
+INSERT INTO `Zid2pinyin` (`zid`, `pinyins`) VALUES<br>
+
+
+</div>
+<p id="demo">
+
+</p>
+
+<button type="button" onclick="displayDate()">-- Data End</button>
+
+</body>
+</html>
+

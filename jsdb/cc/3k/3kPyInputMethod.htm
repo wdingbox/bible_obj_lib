@@ -1,0 +1,136 @@
+<html>
+<head>
+
+
+    <TITLE>7</TITLE>
+    <META http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <script type="text/javascript"  src="./jquery-2.1.1.min.js"></script>  
+    <SCRIPT language="javascript" src="S.3kBibleChineseCharacters.js">
+    </SCRIPT>
+  
+
+
+    <script type="text/javascript">
+    function CLK(_this){
+         //$("a").click(function(idx){
+         //_this.innerHTML
+            var ch = $(_this).text();
+            //alert("clk="+_this.innerHTML);
+            var txt = $("#top_right_view").val();
+            //alert("txt="+txt);
+            $("#top_right_view").text(txt+ch);
+        //});       
+    };
+    function GetAll()
+    {
+        var i=0;
+        var TotChineseChar=0;
+        var s = "";
+        for (key in S) {
+            i+=1;
+            var charstr="";
+            for(var k=0;k<S[key].length;k+=1){
+                var idxk = "idx"+k;
+                charstr += "<a onclick='CLK(this)' class='"+idxk+"' title='"+idxk+"'>" + S[key][k]+ "</a>";
+            }
+            s+= i + " : " + key + "=" + charstr + "<br>\n";
+            TotChineseChar+= S[key].length;
+        }
+        return s;
+    }
+    function GetTot()
+    {
+        var TotChineseChar=0;
+        var s = "";
+        for (key in S) {
+            TotChineseChar+= S[key].length;
+        }
+        return "TotChinese="+TotChineseChar;
+    }
+    function MaxLen()
+    {
+        var iMax=0;
+        var Str="";
+        for (key in S) {
+            if (iMax < S[key].length ) {
+                iMax = S[key].length;
+                Str = key+"="+ S[key];
+            }
+        }
+        return "MaxLen="+iMax +"," + Str;
+    }
+
+    function displayDate()
+    {   
+        var pinyin="shi4";
+        var testChineses=S[pinyin];
+        if ( S[pinyin] == undefined ) {
+            alert("");
+        }
+       
+        document.getElementById("demo").innerHTML =GetAll() +"<br>"+GetTot()+"<br>"+MaxLen();
+
+    }
+    
+
+    
+    </script>
+                   
+<script type="text/javascript">
+
+$(document).ready(function(){
+ $("html body").css("cursor","cross");
+              
+});//$(document).ready(function(){                                      
+</script>
+</head>
+
+<style type="text/css">
+div.sql_editor{
+  position: fixed; 
+  //zIndex: 5000; 
+  left: 0;  
+  top: 0; 
+}
+
+
+#ZoomZone{
+  position: fixed; 
+  right:1px;  
+  top: 1px; 
+}
+#zoomedpicture{
+  //zIndex: 0; 
+  position: absolute; 
+  right: 20px;  
+  top: 20px; 
+  height: 20px;
+  width: 20px;
+}
+
+#top_right_view{
+  position: fixed; 
+  right:1px;  
+  top: 40px; 
+}
+
+
+img.tmpimg{
+  right: 1px;  
+  height: 20px;
+  width: 20px;
+}
+</style>   
+<body onload="displayDate()">
+<textarea id="top_right_view"></textarea>
+<h1>3k Chinese Characters</h1>
+<p id="demo">
+7809 chinese words in BIble.
+</p>
+
+<button type="button" onclick="displayDate()">Display</button>
+
+</body>
+
+</html>
+

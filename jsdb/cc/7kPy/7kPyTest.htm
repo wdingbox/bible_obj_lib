@@ -1,0 +1,73 @@
+<html>
+<head>
+
+
+    <TITLE>7</TITLE>
+    <META http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <SCRIPT language="javascript" src="Py00.unicode.js">
+    </SCRIPT>
+    <SCRIPT language="javascript" src="Py01.unicode.js">
+    </SCRIPT>
+
+
+    <script type="text/javascript">
+
+    function GetAll()
+    {
+        var i=0;
+        var TotChineseChar=0;
+        var s = "";
+        for (key in Y) {
+            i+=1;
+            s+= i + " : " + key + "=" + Y[key] + "<br>\n";
+            TotChineseChar+= Y[key].length;
+        }
+        return s;
+    }
+    function GetTot()
+    {
+        var TotChineseChar=0;
+        var s = "";
+        for (key in Y) {
+            TotChineseChar+= Y[key].length;
+        }
+        return "TotChinese="+TotChineseChar;
+    }
+    function MaxLen()
+    {
+        var iMax=0;
+        var Str="";
+        for (key in Y) {
+            if (iMax < Y[key].length ) {
+                iMax = Y[key].length;
+                Str = key+"="+ Y[key];
+            }
+        }
+        return "MaxLen="+iMax +"," + Str;
+    }
+
+    function displayDate()
+    {   
+        var pinyin="shi4a";
+        var testChineses=Y[pinyin];
+        if ( Y[pinyin] == undefined ) {
+            alert("");
+        }
+       
+        document.getElementById("demo").innerHTML =GetTot()+"<br>"+MaxLen()+"<br>"+GetAll() ;
+
+    }
+    </script>
+</head>
+<body>
+
+<h1>7k chinese words in Bible</h1>
+<p id="demo">
+7809 chinese words in BIble.
+</p>
+
+<button type="button" onclick="displayDate()">Display</button>
+
+</body>
+</html>
+

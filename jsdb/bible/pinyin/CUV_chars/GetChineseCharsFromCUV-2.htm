@@ -1,0 +1,416 @@
+<html>
+<head>
+    <TITLE>GetChineseFrCUV</TITLE>
+    <META http-equiv="Content-Type" content="text/html; charset=gb2312">
+	
+	<SCRIPT language="javascript" src="../../../../jq/jquery.js">
+    </SCRIPT>
+	
+	<SCRIPT language="javascript" src="../../../../jsdk/bible/_inc_bibleChinese.js"></SCRIPT>
+	<SCRIPT>
+	inc_bibleChinese("../../../../jsdb/bible/bbc/");
+    </SCRIPT>
+	
+	<SCRIPT language="javascript" src="./7kPy/Py00.unicode.js">
+    </SCRIPT>
+	<SCRIPT language="javascript" src="./7kPy/Py01.unicode.js">
+    </SCRIPT>
+	
+	
+	<SCRIPT language="javascript" src="../../../../jsdb/cc/3k/S.3kBibleChineseCharacters.js">
+    </SCRIPT>
+	
+<style>
+input{
+background-color:yellow;
+}
+</style>	
+
+
+
+<script type="text/javascript">
+    var total=0;
+    var max_pinying=0;
+    var max_pinyin_string="";
+
+	var ChineseCharsStatistic=function ()
+    {       
+		this.ccd_max=0;
+		this.ccd_min=99999;
+		this.tmp=[];//array can indexOf(), sort.reverse(), but no foreach heap.
+		this.sta={};//obj, for each heap
+		this.SymbolCharCodes=[12289,12290,65294,12288,12308,12309,65292,12303,12302,65289,65288,32,8221,8220,579,513,502,480,65311];
+    }
+	
+	ChineseCharsStatistic.prototype.gettxt=function(){
+		return this.text;
+	}
+	ChineseCharsStatistic.prototype.Calc=function(arrChineseText){
+		var self=this; 
+		$.each(arrChineseText,function(key,val){
+            self.calc_str(val);
+        });
+	}
+	ChineseCharsStatistic.prototype.calc_str=function(str){
+		for(var i=0; i<str.length; i++){
+			var ccd=str.charCodeAt(i);
+			var idx = this.tmp.indexOf(ccd);
+			if( idx < 0 ){				
+				idx=this.tmp.length;
+				this.tmp.push(ccd);
+				this.sta[idx]={ccd:ccd,frq:0};
+			}
+			this.sta[idx].frq += 1;
+		}
+	}
+	ChineseCharsStatistic.prototype.sort_sta=function(){
+		var ss=[];
+		$.each(this.sta,function(key,jsn){
+			var s=("00000000"+jsn.frq).slice(-9)+" "+jsn.ccd;			
+			ss.push(s);
+        });
+		ss.sort().reverse();
+		
+		this.sta={};
+		var self=this;
+		$.each(ss, function(i,s){
+			var arr=s.split(" ");
+			self.sta[i]={ccd:arr[1], frq:arr[0]};
+		});
+	}
+	ChineseCharsStatistic.prototype.find_sta_by_ccd=function(ccd){
+		var ret=null;
+		$.each(this.sta,function(key,jsn){
+			if(ccd == jsn.ccd){	
+				ret=jsn;
+				return;
+			}
+        });
+		return ret;
+	}
+	ChineseCharsStatistic.prototype.attach_py_2_sta=function(){
+		var sta2=[];
+		$.each(this.sta,function(i,jsn){
+			jsn.py=GetPyNoTone_byCharCode(jsn.ccd);// 
+			sta2.push(jsn);
+        });
+		this.sta=sta2;
+		return;
+	}
+	ChineseCharsStatistic.prototype.remove_symbols=function(){
+		var sta2=[];
+		var symb=this.SymbolCharCodes;
+		$.each(this.sta,function(i,jsn){
+			var iccd=parseInt( $.trim(jsn.ccd) );
+			var idx = symb.indexOf(iccd);// 
+			if(idx>=0 || iccd<125){
+				//console.log("remove_symbols iccd:"+iccd);
+			}
+			else {
+				//console.log("iccd:"+iccd);
+				sta2.push(jsn);
+			}
+        });
+		this.sta=sta2;
+		return;
+	}
+	ChineseCharsStatistic.prototype.show_symbols=function(){
+		var ss="<table border='1'><tr><td>#</td><td>ccd</td><tr>";
+		$.each(this.SymbolCharCodes,function(i,ccd){
+		//for(var i=0; i<this.SymbolCharCodes.length; i++ ){
+			//var ccd=this.SymbolCharCodes[i];
+			ss+="<tr><td>"+i+"</td><td>"+ccd+"&#"+ccd+";</td><d></td></tr>";
+        });
+		ss+="</table>";
+		return ss;
+	}
+	
+	ChineseCharsStatistic.prototype.get_ccd_max_min=function(){
+		var max=0, min=99999;
+		$.each(this.sta,function(i,jsn){
+			var ccd=parseInt(jsn.ccd);
+			if(ccd>max) {
+				max=ccd;
+			}
+			if(ccd<min){
+				min=ccd;
+			}
+        });
+		this.ccd_max=max;
+		this.ccd_min=min;
+
+		var ss="//ccd max:"+this.ccd_max+",min="+this.ccd_min;
+		ss+=",size:"+this.sta.length;
+		ss+="<br/>";
+		return  ss;
+	}
+
+	ChineseCharsStatistic.prototype.gen_ccd_py_arr_sort_show=function(){
+		var py_ccd=[];
+		$.each(this.ccd_py_arr,function(ccd,py){
+
+			if( undefined === py){
+			}else{
+				var s=(py+'__________').slice(0,9)+","+ccd;
+				py_ccd.push( s );  
+			}			
+        });
+		py_ccd.sort();
+		var sRet="var P={};//P[charCode]='pinyin' <br/>";
+		$.each(py_ccd,function(i,ss){
+			console.log(ss);
+			var arr=ss.split(",");
+			var ccd=parseInt(arr[1]);
+			var py=arr[0].replace(/[_]/g,'');
+			//console.log(arr.length+","+arr[1]+"=="+ccd+"=="+py);
+			sRet+="P["+ccd+"]='"+py+"';";
+			sRet+=" // &nbsp;&nbsp;&nbsp;&nbsp; &#"+ccd+";";
+			sRet+="<br/>";
+		});
+		return sRet;
+	}
+	ChineseCharsStatistic.prototype.gen_ccd_py_arr=function(){
+		var ccd_py_arr=[];
+		$.each(this.sta,function(i,jsn){
+			if(jsn.py){
+				var arr=jsn.py.split(",");
+				var idx=parseInt(jsn.ccd);
+				ccd_py_arr[idx]=arr[0];   
+			}			
+        });		
+		this.ccd_py_arr=ccd_py_arr;
+		return ccd_py_arr;
+	}
+	ChineseCharsStatistic.prototype.chinese2py=function(str){
+		var ss="";
+		
+		for(var i=0; i<str.length; i++){
+			var ccd=str.charCodeAt(i);
+			var py = this.ccd_py_arr[ccd];
+			if( undefined === py ) py="&#"+ccd+";";
+			ss+=py+" ";			
+		}
+		ss=$.trim(ss);
+		return ss;
+	}
+
+	ChineseCharsStatistic.prototype.gen_ccd_py_js=function(){
+		this.sort_sta();
+		this.attach_py_2_sta();
+		this.remove_symbols();
+		
+		var ss=this.get_ccd_max_min();
+		this.gen_ccd_py_arr();
+		
+		ss+=this.gen_ccd_py_arr_sort_show();
+		return ss;
+	}
+	
+	ChineseCharsStatistic.prototype.display=function(title){
+		var ss="<table border='1'><tr><td>#</td><td>ccd</td><td>py</td><td>frq</td><tr>";
+		var ss2="<table><caption>"+title+"</caption>";
+		var self=this;
+		var count2=0;
+		//for(var i=self.sta.length-1;i>=0;i--){
+		$.each(this.sta,function(i,jsn){
+			var py=jsn.py;
+			var py2=py;
+			if(!py || py.length===0){
+				py="<input></input>";
+			}  
+
+			var s="<tr><td>"+i+"</td><td>"+jsn.ccd+"&#"+jsn.ccd+";</td><td>"+py+"</td><td>"+jsn.frq +"</td></tr>";
+			
+			ss+=s;
+			
+			if( py2 && py2.indexOf(",")>=0){
+				ss2+=s;
+				count2++;
+			}            
+        });
+		ss2+="</table><hr/>";
+		return "multi-sound chars tot:"+count2+ss2 + ss+"</table><hr/>";
+	}
+	ChineseCharsStatistic.prototype.display_PolyToneOnly=function(title){
+		this.sort_sta();
+		this.attach_py_2_sta();
+		this.remove_symbols();
+		return this.display(title);
+		
+		
+	}
+	ChineseCharsStatistic.prototype.display_PolyToneOnly____bk=function(){
+		this.sort_sta();
+		var ss="<table border='1'><tr><td>#</td><td>ccd</td><td>py</td><td>frq</td><tr>";
+		var ss2="<table><caption>No Py found</caption>";
+		var self=this;
+		var count2=0;
+		//for(var i=self.sta.length-1;i>=0;i--){
+		$.each(this.sta,function(i,jsn){
+            //$.each(jsn, function(k,v){
+			     //ss+=k+"="+v;
+			//})
+			//var jsn=self.sta[i];
+			var py=GetPyNoTone_byCharCode(jsn.ccd);//GetPy_byCharCode(jsn.ccd);//( String.fromCharCode(jsn.ccd) );
+			var py2=py;
+			if(py.length===0){
+				py="<input></input>";
+			}  
+
+
+			var s="<tr><td>"+i+"</td><td>"+jsn.ccd+"&#"+jsn.ccd+";</td><td>"+py+"</td><td>"+jsn.frq +"</td></tr>";
+			
+			ss+=s;
+			
+			if(py2.indexOf(",")>=0){
+				ss2+=s;
+				count2++;
+			}            
+        });
+		ss2+="</table><hr/>";
+		return "multi-sound chars tot:"+count2+ss2 + ss+"</table><hr/>";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+    function CUV_statistic()
+    {	var oc=new ChineseCharsStatistic();
+		//oc.calc_str("各从其类各从");//test
+		oc.Calc(I);   
+		document.getElementById("demo").innerHTML = "<hr/>"+oc.display_PolyToneOnly('CUV_statistic')+"<hr/>";
+        //document.getElementById("demo").innerHTML =oc.gettxt() +"<hr/>"+total+"<br>"+max_pinyin_string+max_pinying;
+    }
+    
+
+	function PyStatistic(){
+		var oc=new ChineseCharsStatistic();
+		oc.Calc(Y);
+		document.getElementById("demo").innerHTML = "max indx:6762 diff chars in Py<hr/>"+oc.display_PolyToneOnly('PyStatistic')+"<hr/>";	
+	
+	}
+	function display_py(){
+	   document.getElementById("demo").innerHTML = "<hr/>"+display_py_ccd();
+	}
+    
+	
+	function showCUV(){
+		var ss="";
+		$.each(I,function(k,v){
+			ss+=k+":"+v+"<br>";
+		});
+		document.getElementById("demo").innerHTML=ss;
+	}
+	
+	function show_pinyin(){
+		var ss="";
+		$.each(Y,function(k,v){
+			ss+=k+":"+v+"<br>";
+		});
+		document.getElementById("demo").innerHTML=ss;
+	}
+	
+	function IY_Sta(){
+		var ocI=new ChineseCharsStatistic();
+		ocI.Calc(I);
+		var ocY=new ChineseCharsStatistic();
+		ocY.Calc(Y);
+		
+		var staIY=[];
+		$.each(ocY.sta, function(k,jsnY){
+			var ccd=jsnY.ccd;
+			var obj=ocI.find_sta_by_ccd(ccd);
+			if( null!=obj ){
+				staIY.push(jsnY);
+			}
+		});
+		var ocIY=new ChineseCharsStatistic(); 
+		ocIY.sta=staIY;
+		return ocIY;
+	}
+	function PyInCUVStatistic(){
+		var ocIY =IY_Sta();
+		document.getElementById("demo").innerHTML = "<hr/>"+ocIY.display_PolyToneOnly('PyInCUVStatistic')+"<hr/>";
+	}
+	function PyInCUV_MultiSound_Statistic(){
+		var ocIY=IY_Sta();
+		document.getElementById("demo").innerHTML = "3016 PyInCUV_MultiSound_Statistic<hr/>"+ocIY.display_PolyToneOnly('PyInCUV_MultiSound_Statistic')+"<hr/>";
+	}
+	
+	function S_3k_sta(){
+		var ocY=new ChineseCharsStatistic();
+		ocY.Calc(S);
+		$("#demo").html("S_3k_sta<hr/>"+ocY.display_PolyToneOnly('S_3k_sta')+"<hr/>");
+	}
+	
+	function display_ccd_py_js(){
+		var ocI=new ChineseCharsStatistic();
+		ocI.Calc(I);
+		$("#demo").html("gen_ccd_py_js<hr/>"+ocI.gen_ccd_py_js()+"<hr/>");
+	}
+	function display_symbols(){
+		var ocI=new ChineseCharsStatistic();
+		//ocI.Calc(I);
+		var ss=ocI.show_symbols();
+		$("#demo").html("gen_ccd_py_js<hr/>"+ss+"<hr/>");
+	}
+	
+	function display_translate_CUV_PY(){
+		var ocI=new ChineseCharsStatistic();
+		ocI.Calc(I);
+		ocI.sort_sta();
+		ocI.attach_py_2_sta();
+		ocI.remove_symbols();
+		
+		var ss=ocI.get_ccd_max_min();
+		ss="var P={};//P[charCode]='py';<br/>";
+		ocI.gen_ccd_py_arr();
+		
+		$.each(I,function(key,val){
+			ss+="P."+key+"=\"";
+            //ss+=key+":"+val +"<br/>";
+			ss+=ocI.chinese2py(val)+"\";<br/>";
+        });
+		$("#demo").html("hz2py<hr/>"+ss+"<hr/>");
+		
+		
+	}
+</script>
+                   
+                                    
+
+</head>
+
+<body >
+
+<h1>CUV Chinese Characters statistics</h1>
+<button type="button" onclick="showCUV()">showCUV</button>
+<button type="button" onclick="CUV_statistic()">CUV_statistic</button>
+<button type="button" onclick="show_pinyin()">show_pinyin</button>
+<button type="button" onclick="PyStatistic()">PyStatistic</button>
+<button type="button" onclick="PyInCUVStatistic()">PyInCUVStatistic</button>
+<button type="button" onclick="PyInCUV_MultiSound_Statistic()">PyInCUV_MultiSound_Statistic</button>
+<button type="button" onclick="display_py()">display_py</button>
+<br>
+<button type="button" onclick="display_symbols()">display_symbols</button>
+<button type="button" onclick="display_ccd_py_js()">display_ccd_py_js</button>
+
+<button type="button" onclick="S_3k_sta()">S_3k_sta</button>
+<button type="button" onclick="display_translate_CUV_PY()">display_translate_CUV_PY</button>
+<a target='blank' href='../splitter/2015_splitter.php'>goto splitter</a>
+<p id="demo">
+7809 chinese words in BIble.
+</p>
+
+
+</body>
+
+</html>
+

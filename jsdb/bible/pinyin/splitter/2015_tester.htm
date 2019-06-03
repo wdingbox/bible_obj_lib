@@ -1,0 +1,227 @@
+<html>
+
+<header>
+	<SCRIPT language="javascript" src="../../../../jq/jquery.js"></SCRIPT>
+	
+	
+    <script language="javascript" src="../../../../jsdk/bible/_inc_biblePinyin.js?a=a"></script>
+    <script language="javascript">inc_biblePinyin("./2015/",182);</script>
+	
+	<SCRIPT language="javascript" src="../../../../jsdk/bible/_inc_bibleChinese.js"></SCRIPT>
+	<SCRIPT>
+	inc_bibleChinese("../../../../jsdb/bible/bbc/");
+    </SCRIPT>
+
+<script type="text/javascript">
+$(function(){
+	
+});
+
+function getall(){
+    var str="";
+    var i=0;
+    var LongestVers="";
+    var ShortestVers="----------------------------------------------------";
+    
+    var Tmp = new Object();
+    var iDup=0;
+    for (key in P ) {
+        if (undefined != Tmp.key ) {
+            Tmp.key+=1;
+            iDup+=1;
+            //alert(i + ":duplicate: "+key+","+Tmp.key);
+        }
+        else{
+            Tmp.key=0;
+        }
+        var s = P[key];
+        if (s.length=0) alert(key);
+        if( s.length > LongestVers.length-key.length) LongestVers  = key+":"+s;
+        if( s.length < ShortestVers.length-key.length) ShortestVers= key+":"+s;
+        
+        //str+=i + " : "+ key+"="+s+"<br>"    ;
+		str+="P."+ key + "=\"" +s+ "\";<br>";
+        i++;
+    }
+    //alert();
+    var ss =dbgout_inc_BiblePinyin+"<hr/>";
+    ss +="iDup:"+iDup+"<br>";
+    ss +="longest:"+LongestVers+"<br>";
+    ss +="Shortest:"+ShortestVers+"<br>";
+	ss +=str;
+    document.getElementById("test").innerHTML = ss ;
+    alert(iDup);
+	
+	
+}
+function getallkeys(){
+    var str="";
+    var i=0;
+    var LongestVers="";
+    var ShortestVers="----------------------------------------------------";
+    
+    var Tmp = new Object();
+    var iDup=0;
+    for (key in P ) {
+        if (undefined != Tmp.key ) {
+            Tmp.key+=1;
+            iDup+=1;
+            //alert(i + ":duplicate: "+key+","+Tmp.key);
+        }
+        else{
+            Tmp.key=0;
+        }
+        var s = P[key];
+        if (s.length=0) alert(key);
+        if( s.length > LongestVers.length-key.length) LongestVers  = key+":"+s;
+        if( s.length < ShortestVers.length-key.length) ShortestVers= key+":"+s;
+        
+        str+=i + " : "+ key+"<br>"    ;
+        i++;
+    }
+    //alert();
+    document.getElementById("test").innerHTML +=dbgout_inc_BiblePinyin+"<hr/>iDup:"+iDup+"<br>";
+    document.getElementById("test").innerHTML +="longest:"+LongestVers+"<br>";
+    document.getElementById("test").innerHTML +="Shortest:"+ShortestVers+"<br>";
+    document.getElementById("test").innerHTML += str;
+    alert(iDup);
+}
+
+
+	
+	
+	
+	
+	
+	
+	
+var PinYinSearchCUV=function(){
+	this.foundKeys={};
+	
+	this.hzFoundKeyPhraseArr={};
+	
+	this.hzColoredVersusArr={};
+	this.sUniqueWordsArr=[];
+};
+PinYinSearchCUV.prototype.searchChineseByPy=function(arrSearch){
+	var searchLen = arrSearch.length;
+    for ( key in P) {
+            var pybible = P[key];
+            var pyArr = pybible.split(" ");
+			
+            var FoundWordsArr=[];
+            var iPos=this.indexOf_Arr(pyArr,arrSearch,0);
+            while(iPos>=0){
+                var sWords = I[key].substr(iPos, searchLen);
+                if( FoundWordsArr.indexOf(sWords) < 0 ){
+                    FoundWordsArr.push(sWords);
+                }
+                iPos=this.indexOf_Arr(pyArr,arrSearch,1+iPos);
+            }
+            if (FoundWordsArr.length > 0) {
+                this.hzFoundKeyPhraseArr[key]=FoundWordsArr;               
+            }
+        //}
+    }
+}
+PinYinSearchCUV.prototype.indexOf_Arr=function(srcArr,needleArr,startPos){
+    var iIndx = srcArr.indexOf(needleArr[0],startPos);
+    if(iIndx<0) return -1;
+    var i=iIndx+1, j=1;
+    while(j< needleArr.length){
+        if(i>=srcArr.length ) {
+            return -1;
+        }else {
+            if(srcArr[i] != needleArr[j]) {//restart next search..
+               iIndx = srcArr.indexOf(needleArr[0],1+iIndx);
+               if(iIndx<0) return -1;
+               i=iIndx+1, j=1;
+               continue;
+            }
+        }               
+        i+=1; j+=1;
+    }
+    return iIndx;
+}
+
+PinYinSearchCUV.prototype.colorize=function(){
+	console.log("colorize");
+	var s="";
+    var i=0;    
+    this.sUniqueWordsArr=[];
+	var FoundVers={};
+    for ( key in this.hzFoundKeyPhraseArr) {
+        i++;
+        var bFound=0;
+        var chinesebible = I[key];
+        var sWordArr=this.hzFoundKeyPhraseArr[key];
+        for( var j=0;j<sWordArr.length; j++){
+            var words = sWordArr[j];
+            if( this.sUniqueWordsArr.indexOf(words)<0){
+                this.sUniqueWordsArr.push(words);
+            }
+            var str2 = "<font color='red'>" + words + "</font>";
+            var reg = new RegExp(words, "g")  //"/" + str + "/g";
+            chinesebible = chinesebible.replace(reg, str2);
+        }
+		this.hzColoredVersusArr[key]=chinesebible;
+
+        //var iIndicator = oBibleBookChapterVerse.Interpret(key);
+        //s += GetTR1(1, oBibleBookChapterVerse.isKeySaying,key, chinesebible);//search by pinyin
+    }
+}
+PinYinSearchCUV.prototype.show=function(){
+	this.colorize();
+	
+	var ret="";
+	var i=0;
+	
+	$.each(this.sUniqueWordsArr,function(k,words){
+		ret+=words+",";
+	});	
+	console.log("sUniqueWordsArr");
+	ret+="<hr/><br/>";
+    $.each (this.hzColoredVersusArr, function(key,verse) {
+        ret+=key+"=="+verse;
+		ret+="<br/>";
+		i++;
+    })
+	ret = "TotFound:"+i+"<br/>" + ret;
+	
+
+	console.log("show");
+	return ret;
+}
+
+
+
+$(function(){
+ $("#search_py").click(function(){
+	alert("");
+	 var search=$("#searchpy").val();
+	 console.log("searchpy="+search);
+	 
+	 var ps=new PinYinSearchCUV();
+	 var searchArr=search.split(" ");
+	 ps.searchChineseByPy(searchArr);
+	 
+	 var s=ps.show();
+	 $("#test").html(s);
+	 //alert("");
+	 console.log("done");
+ });
+ 
+});
+</script>
+</header>
+<body>
+official vers 31103 or 31104. we had 31101.
+
+<button onclick="getall()">getall</button><button onclick="getallkeys()">getallkeys</button>
+<hr/>
+<a target='blank' href='../splitter/2015_splitter.php'>goto splitter</a><br/>
+<button id='search_py' ">search_py</button><input id='searchpy' value='xi le'></input>
+<hr/>
+<a id="test"/>
+</body>
+</html>
