@@ -50,7 +50,7 @@ var _crf={
             "14": "",
             "15": "",
             "16": "",
-            "17": "",
+            "17": "Dualism changed: change knowledge of God and the created things into knowledge of good and evil that are both are created without God.  ",
             "18": "",
             "19": "",
             "20": "",
