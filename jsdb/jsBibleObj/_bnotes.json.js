@@ -2208,7 +2208,7 @@ var _bnotes=
             "12": "",
             "13": "",
             "14": "",
-            "15": "",
+            "15": " 1. Hide. 2. Take as owners   3. Glory self. Without thanksgiving. ",
             "16": "",
             "17": "",
             "18": "",
@@ -25596,7 +25596,7 @@ var _bnotes=
             "33": "",
             "34": "",
             "35": "",
-            "36": ""
+            "36": "Go to America for coating. "
         },
         "15": {
             "1": "",
