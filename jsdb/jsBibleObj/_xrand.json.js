@@ -322,7 +322,7 @@ var _popups={
             "32": ""
         },
         "12": {
-            "1": "",
+            "1": "Abraham 3 unknown and 3 deny wife3 covenants ",
             "2": "",
             "3": "",
             "4": "",
