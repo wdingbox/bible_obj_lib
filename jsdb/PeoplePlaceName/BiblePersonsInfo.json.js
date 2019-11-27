@@ -10,23 +10,23 @@ var BiblePersonsInfo =
 {
     "Aaron": [
         "亚伦",
-        354
+        222
     ],
     "Abdon": [
         "押顿",
-        9
+        3
     ],
     "Abednego": [
         "亚伯尼歌",
-        14
+        7
     ],
     "Abel": [
         "亚伯",
-        24
+        18
     ],
     "Abiathar": [
         "亚比亚他",
-        30
+        23
     ],
     "Abijam": [
         "亚比央",
@@ -34,39 +34,39 @@ var BiblePersonsInfo =
     ],
     "Abimelech": [
         "亚比米勒",
-        62
+        43
     ],
     "Abishai": [
         "亚比筛",
-        26
+        21
     ],
     "Abner": [
         "押尼珥",
-        59
+        41
     ],
     "Abraham": [
         "亚伯拉罕",
-        253
+        127
     ],
     "Absalom": [
         "押沙龙",
-        103
+        57
     ],
     "Achan": [
         "亚干",
-        7
+        6
     ],
     "Achish": [
         "亚吉",
-        19
+        15
     ],
     "Adam": [
         "亚当",
-        24
+        15
     ],
     "Adonijah": [
         "亚多尼雅",
-        28
+        16
     ],
     "Adonizedek": [
         "亚多尼洗德",
@@ -74,19 +74,19 @@ var BiblePersonsInfo =
     ],
     "Aeneas": [
         "以尼雅",
-        3
+        1
     ],
     "Agabus": [
         "亚迦布",
-        2
+        1
     ],
     "Agrippa": [
         "亚基帕",
-        11
+        6
     ],
     "Ahab": [
         "亚哈",
-        93
+        65
     ],
     "Ahasuerus": [
         "亚哈随鲁",
@@ -94,71 +94,71 @@ var BiblePersonsInfo =
     ],
     "Ahaz": [
         "亚哈斯",
-        88
+        35
     ],
     "Ahaziah": [
         "亚哈谢",
-        44
+        27
     ],
     "Ahijah": [
         "亚希雅",
-        22
+        12
     ],
     "Ahimelech": [
         "亚希米勒",
-        18
+        14
     ],
     "Ahithophel": [
         "亚希多弗",
-        20
+        15
     ],
     "Alexander": [
         "亚力山大",
-        5
+        4
     ],
     "Amalekites": [
         "亚玛力人",
-        34
+        24
     ],
     "Amasa": [
         "亚玛撒",
-        23
+        14
     ],
     "Amaziah": [
         "亚玛谢",
-        42
+        32
     ],
     "Amon": [
         "亚们",
-        45
+        14
     ],
     "Amos": [
         "阿摩斯",
-        8
+        3
     ],
     "Ananias": [
         "亚拿尼亚",
-        13
+        8
     ],
     "Andrew": [
         "安得烈",
-        14
+        5
     ],
     "Anna": [
         "亚拿",
-        5
+        0
     ],
     "Annas": [
         "亚那",
-        4
+        3
     ],
     "Apollos": [
         "亚波罗",
-        11
+        6
     ],
     "Aquila": [
         "亚居拉",
-        7
+        3
     ],
     "Archelaus": [
         "亚基老",
@@ -166,31 +166,31 @@ var BiblePersonsInfo =
     ],
     "Archippus": [
         "亚基布",
-        2
+        1
     ],
     "Aristarchus": [
         "亚里达古",
-        5
+        2
     ],
     "Artaxerxes": [
         "亚达薛西",
-        15
+        6
     ],
     "Asa": [
         "亚撒",
-        122
+        49
     ],
     "Asaph": [
         "亚萨",
-        34
+        15
     ],
     "Asher": [
         "亚设",
-        86
+        20
     ],
     "Athaliah": [
         "亚他利雅",
-        17
+        12
     ],
     "Augustus": [
         "亚古士都",
@@ -198,35 +198,35 @@ var BiblePersonsInfo =
     ],
     "Azariah": [
         "亚撒利雅",
-        49
+        27
     ],
     "Baasha": [
         "巴沙",
-        27
+        23
     ],
     "Balaam": [
         "巴兰",
-        64
+        46
     ],
     "Bar": [
         "jona 巴约拿",
-        127
+        0
     ],
     "Barabbas": [
         "巴拉巴",
-        12
+        8
     ],
     "Barak": [
         "巴拉",
-        16
+        8
     ],
     "Barnabas": [
         "巴拿巴",
-        34
+        27
     ],
     "Bartholomew": [
         "巴多罗买",
-        4
+        1
     ],
     "Bartimaeus": [
         "巴底买",
@@ -234,11 +234,11 @@ var BiblePersonsInfo =
     ],
     "Bathsheba": [
         "拔示巴",
-        12
+        7
     ],
     "Belshazzar": [
         "伯沙撒",
-        8
+        4
     ],
     "Benhadad": [
         "便哈达",
@@ -246,7 +246,7 @@ var BiblePersonsInfo =
     ],
     "Benjamin": [
         "便雅悯",
-        138
+        58
     ],
     "Bernice": [
         "百尼基",
@@ -254,23 +254,23 @@ var BiblePersonsInfo =
     ],
     "Boanerges": [
         "半尼齐",
-        1
+        0
     ],
     "Boaz": [
         "波阿斯",
-        29
+        18
     ],
     "Caiaphas": [
         "该亚法",
-        9
+        3
     ],
     "Cain": [
         "该隐",
-        23
+        14
     ],
     "Caleb": [
         "迦勒",
-        43
+        31
     ],
     "Carpus": [
         "加布",
@@ -278,7 +278,7 @@ var BiblePersonsInfo =
     ],
     "Cephas": [
         "矶法",
-        4
+        3
     ],
     "Claudia": [
         "革老底亚",
@@ -286,55 +286,55 @@ var BiblePersonsInfo =
     ],
     "Claudius": [
         "Lysias 革老丢吕西亚",
-        3
+        2
     ],
     "Cornelius": [
         "哥尼流",
-        10
+        7
     ],
     "Crispus": [
         "基利斯布",
-        2
+        1
     ],
     "Cuza": [
         "苦撒",
-        1
+        0
     ],
     "Cyrus": [
         "古列",
-        23
+        17
     ],
     "Dan": [
         "但",
-        513
+        31
     ],
     "Daniel": [
         "但以理",
-        78
+        44
     ],
     "Darius": [
         "大利乌",
-        25
+        15
     ],
     "David": [
         "大卫",
-        1012
+        680
     ],
     "Deborah": [
         "底波拉",
-        11
+        6
     ],
     "Demas": [
         "底马",
-        3
+        2
     ],
     "Demetrius": [
         "底米丢",
-        3
+        2
     ],
     "Dionysius": [
         "丢尼修",
-        1
+        0
     ],
     "Dorcas": [
         "多加",
@@ -342,47 +342,47 @@ var BiblePersonsInfo =
     ],
     "Drusilla": [
         "土西拉",
-        1
+        0
     ],
     "Edom": [
         "以东",
-        137
+        49
     ],
     "Ehud": [
         "以笏",
-        12
+        9
     ],
     "Elah": [
         "以拉",
-        17
+        11
     ],
     "Eli": [
         "以利",
-        444
+        23
     ],
     "Elihu": [
         "以利户",
-        10
+        8
     ],
     "Elijah": [
         "以利亚",
-        113
+        76
     ],
     "Eliphaz": [
         "以利法",
-        14
+        10
     ],
     "Elisha": [
         "以利沙",
-        114
+        74
     ],
     "Elizabeth": [
         "以利沙伯",
-        10
+        9
     ],
     "Elon": [
         "以伦",
-        9
+        6
     ],
     "Elymas": [
         "以吕马",
@@ -394,23 +394,23 @@ var BiblePersonsInfo =
     ],
     "Enoch": [
         "以诺",
-        13
+        6
     ],
     "Epaphras": [
         "以巴弗",
-        3
+        0
     ],
     "Epaphroditus": [
         "以巴弗提",
-        2
+        1
     ],
     "Epenetus": [
         "以拜尼土",
-        1
+        0
     ],
     "Erastus": [
         "以拉都",
-        3
+        1
     ],
     "Esarhaddon": [
         "以撒哈顿",
@@ -418,11 +418,11 @@ var BiblePersonsInfo =
     ],
     "Esau": [
         "以扫",
-        101
+        53
     ],
     "Esther": [
         "以斯帖",
-        47
+        31
     ],
     "Eubulus": [
         "友布罗",
@@ -434,11 +434,11 @@ var BiblePersonsInfo =
     ],
     "Eutychus": [
         "犹推古",
-        1
+        0
     ],
     "Eve": [
         "夏娃",
-        270
+        1
     ],
     "Ezekiel": [
         "以西结",
@@ -446,23 +446,23 @@ var BiblePersonsInfo =
     ],
     "Ezra": [
         "以斯拉",
-        29
+        22
     ],
     "Felix": [
         "腓力斯",
-        10
+        5
     ],
     "Festus": [
         "非斯都",
-        14
+        6
     ],
     "Gad": [
         "迦得",
-        98
+        39
     ],
     "Gaius": [
         "该犹",
-        5
+        2
     ],
     "Gallio": [
         "迦流",
@@ -470,19 +470,19 @@ var BiblePersonsInfo =
     ],
     "Gamaliel": [
         "迦玛列",
-        7
+        6
     ],
     "Gehazi": [
         "基哈西",
-        20
+        13
     ],
     "Gideon": [
         "基甸",
-        53
+        33
     ],
     "Gog": [
         "歌革",
-        14
+        7
     ],
     "Habakkuk": [
         "哈巴谷",
@@ -490,47 +490,47 @@ var BiblePersonsInfo =
     ],
     "Hagar": [
         "夏甲",
-        16
+        8
     ],
     "Haggai": [
         "哈该",
-        11
+        6
     ],
     "Hanani": [
         "哈拿尼",
-        39
+        5
     ],
     "Hebrew": [
         "希伯来人",
-        43
+        19
     ],
     "Hermogenes": [
         "黑摩其尼",
-        1
+        0
     ],
     "Herod": [
         "希律",
-        58
+        34
     ],
     "Herodias": [
         "希罗底",
-        6
+        3
     ],
     "Hezekiah": [
         "希西家",
-        133
+        97
     ],
     "Hobab": [
         "何巴",
-        2
+        1
     ],
     "Hosea": [
         "何西阿",
-        5
+        1
     ],
     "Hoshea": [
         "何细亚",
-        12
+        9
     ],
     "Hymenaeus": [
         "许米乃",
@@ -542,23 +542,23 @@ var BiblePersonsInfo =
     ],
     "Iddo": [
         "易多",
-        14
+        6
     ],
     "Ira": [
         "以拉",
-        10
+        6
     ],
     "Isaac": [
         "以撒",
-        135
+        95
     ],
     "Isaiah": [
         "以赛亚",
-        53
+        43
     ],
     "Iscariot": [
         "加略人",
-        11
+        1
     ],
     "Ishbosheth": [
         "伊施波设",
@@ -566,31 +566,31 @@ var BiblePersonsInfo =
     ],
     "Ishmael": [
         "以实玛利",
-        55
+        32
     ],
     "Israel": [
         "以色列",
-        2597
+        849
     ],
     "Issachar": [
         "以萨迦",
-        43
+        18
     ],
     "Jabez": [
         "雅比斯",
-        4
+        2
     ],
     "Jacob": [
         "雅各",
-        384
+        215
     ],
     "Jair": [
         "睚珥",
-        20
+        5
     ],
     "Jairus": [
         "睚鲁",
-        6
+        0
     ],
     "Jambres": [
         "佯庇",
@@ -598,71 +598,71 @@ var BiblePersonsInfo =
     ],
     "James": [
         "雅各",
-        42
+        23
     ],
     "Jason": [
         "耶孙",
-        5
+        4
     ],
     "Jehoahaz": [
         "约哈斯",
-        22
+        16
     ],
     "Jehoash": [
         "约阿施",
-        28
+        25
     ],
     "Jehoiachin": [
         "约雅斤",
-        28
+        25
     ],
     "Jehoiakim": [
         "约雅敬",
-        37
+        28
     ],
     "Jehoram": [
         "约兰",
-        32
+        24
     ],
     "Jehoshaphat": [
         "约沙法",
-        87
+        61
     ],
     "Jehu": [
         "耶户",
-        84
+        60
     ],
     "Jephthah": [
         "耶弗他",
-        24
+        20
     ],
     "Jeremiah": [
         "耶利米",
-        147
+        108
     ],
     "Jeroboam": [
         "耶罗波安",
-        101
+        78
     ],
     "Jeshua": [
         "约书亚",
-        29
+        14
     ],
     "Jesse": [
         "耶西",
-        47
+        26
     ],
     "Jethro": [
         "叶忒罗",
-        11
+        7
     ],
     "Jew": [
         "犹太人",
-        301
+        15
     ],
     "Jezebel": [
         "耶洗别",
-        22
+        14
     ],
     "Jnnes": [
         "雅尼",
@@ -670,107 +670,107 @@ var BiblePersonsInfo =
     ],
     "Joab": [
         "约押",
-        150
+        109
     ],
     "Joanna": [
         "约亚拿",
-        2
+        1
     ],
     "Joash": [
         "约阿施",
-        42
+        33
     ],
     "Job": [
         "约伯",
-        1138
+        40
     ],
     "Jochebed": [
         "约基别",
-        2
+        0
     ],
     "Joda": [
         "犹大",
-        1
+        0
     ],
     "Joel": [
         "约珥",
-        22
+        12
     ],
     "John": [
         "约翰",
-        157
+        92
     ],
     "Jonah": [
         "约拿",
-        29
+        19
     ],
     "Joram": [
         "约兰",
-        28
+        24
     ],
     "Joseph": [
         "约瑟",
-        261
+        159
     ],
     "Joshaphat": [
         "约沙法",
-        2
+        1
     ],
     "Joshua": [
         "约书亚",
-        218
+        177
     ],
     "Josiah": [
         "约西亚",
-        61
+        47
     ],
     "Jotham": [
         "约坦",
-        29
+        20
     ],
     "Jud": [
         "犹大",
-        979
+        0
     ],
     "Juda": [
         "犹大",
-        887
+        0
     ],
     "Judah": [
         "犹尼亚",
-        841
+        479
     ],
     "Junias": [
         "犹大",
-        1
+        0
     ],
     "Justus": [
         "犹士都",
-        3
+        0
     ],
     "Korah": [
         "可拉",
-        35
+        7
     ],
     "Laban": [
         "拉班",
-        54
+        37
     ],
     "Lazarus": [
         "拉撒路",
-        18
+        14
     ],
     "Leah": [
         "利亚",
-        34
+        18
     ],
     "Levi": [
         "利未",
-        379
+        27
     ],
     "Linus": [
         "利奴",
-        1
+        0
     ],
     "Lois": [
         "罗以",
@@ -778,35 +778,35 @@ var BiblePersonsInfo =
     ],
     "Lot": [
         "罗得",
-        45
+        21
     ],
     "Lucius": [
         "路求",
-        2
+        1
     ],
     "Luke": [
         "路加",
-        3
+        1
     ],
     "Lydia": [
         "吕底亚",
-        6
+        3
     ],
     "Lysias": [
         "吕西亚",
-        2
+        1
     ],
     "Magog": [
         "玛各",
-        5
+        2
     ],
     "Malachi": [
         "玛拉基",
-        1
+        0
     ],
     "Malchus": [
         "马勒古",
-        1
+        0
     ],
     "Manaen": [
         "马念",
@@ -814,19 +814,19 @@ var BiblePersonsInfo =
     ],
     "Manasseh": [
         "玛拿西",
-        150
+        87
     ],
     "Mark": [
         "马可",
-        12
+        6
     ],
     "Martha": [
         "马大",
-        13
+        9
     ],
     "Mary": [
         "马利亚",
-        59
+        45
     ],
     "Mathew": [
         "马太",
@@ -834,19 +834,19 @@ var BiblePersonsInfo =
     ],
     "Melchizedek": [
         "麦基洗德",
-        10
+        4
     ],
     "Menahem": [
         "米拿现",
-        8
+        6
     ],
     "Mephibosheth": [
         "米非波设",
-        16
+        8
     ],
     "Meshach": [
         "米煞",
-        14
+        13
     ],
     "Methushelah": [
         "玛土撒拉",
@@ -854,19 +854,19 @@ var BiblePersonsInfo =
     ],
     "Micah": [
         "弥迦",
-        32
+        14
     ],
     "Micaiah": [
         "米该雅",
-        28
+        23
     ],
     "Michael": [
         "米迦勒",
-        15
+        2
     ],
     "Miriam": [
         "米利暗",
-        13
+        6
     ],
     "Mnazon": [
         "拿孙",
@@ -874,19 +874,19 @@ var BiblePersonsInfo =
     ],
     "Mordecai": [
         "末底改",
-        58
+        38
     ],
     "Moses": [
         "摩西",
-        846
+        525
     ],
     "Naaman": [
         "乃缦",
-        23
+        12
     ],
     "Naboth": [
         "拿伯",
-        22
+        16
     ],
     "Nadad": [
         "拿答",
@@ -894,19 +894,19 @@ var BiblePersonsInfo =
     ],
     "Nahor": [
         "拿鹤",
-        19
+        5
     ],
     "Nahum": [
         "拿鸿",
-        2
+        1
     ],
     "Naphtali": [
         "拿俄米",
-        54
+        20
     ],
     "Nathan": [
         "拿弗他利",
-        49
+        31
     ],
     "Nathanael": [
         "拿单",
@@ -914,15 +914,15 @@ var BiblePersonsInfo =
     ],
     "Nebuchadnezzar": [
         "拿但业",
-        90
+        74
     ],
     "Nehemiah": [
         "尼布甲尼撒",
-        9
+        6
     ],
     "Nicodemus": [
         "尼希米",
-        6
+        3
     ],
     "Nicolas": [
         "尼哥底母",
@@ -930,7 +930,7 @@ var BiblePersonsInfo =
     ],
     "Noah": [
         "挪亚尼哥拉",
-        58
+        31
     ],
     "Nympha": [
         "宁法",
@@ -938,51 +938,51 @@ var BiblePersonsInfo =
     ],
     "Obadiah": [
         "俄巴底亚",
-        22
+        12
     ],
     "Obed": [
         "俄备德",
-        32
+        7
     ],
     "Omri": [
         "暗利",
-        17
+        10
     ],
     "Onesimus": [
         "阿尼西母",
-        2
+        0
     ],
     "Onesiphorus": [
         "阿尼色弗",
-        2
+        0
     ],
     "Othniel": [
         "罗陀聂",
-        10
+        5
     ],
     "Paul": [
         "保罗",
-        210
+        155
     ],
     "Pekah": [
         "比加",
-        18
+        11
     ],
     "Pekahiah": [
         "比加辖",
-        6
+        4
     ],
     "Peniel": [
         "?努伊勒",
-        6
+        2
     ],
     "Persis": [
         "彼息氏",
-        1
+        0
     ],
     "Peter": [
         "彼得",
-        183
+        134
     ],
     "Philemon": [
         "腓利门",
@@ -990,15 +990,15 @@ var BiblePersonsInfo =
     ],
     "Philetus": [
         "腓理徒",
-        1
+        0
     ],
     "Philip": [
         "腓利",
-        43
+        21
     ],
     "Phoebe": [
         "非比",
-        1
+        0
     ],
     "Phygelus": [
         "腓吉路",
@@ -1006,7 +1006,7 @@ var BiblePersonsInfo =
     ],
     "Pilate": [
         "彼拉多",
-        62
+        47
     ],
     "Pontius": [
         "Pilate 本丢彼拉多",
@@ -1022,11 +1022,11 @@ var BiblePersonsInfo =
     ],
     "Publius": [
         "部百流",
-        1
+        0
     ],
     "Pudens": [
         "布田",
-        1
+        0
     ],
     "Quirinius": [
         "居里扭",
@@ -1034,15 +1034,15 @@ var BiblePersonsInfo =
     ],
     "Rachel": [
         "拉结",
-        47
+        34
     ],
     "Rahab": [
         "拉哈伯",
-        14
+        10
     ],
     "Rebekah": [
         "利百加",
-        32
+        21
     ],
     "Rechad": [
         "利甲",
@@ -1050,19 +1050,19 @@ var BiblePersonsInfo =
     ],
     "Rehoboam": [
         "罗波安",
-        53
+        40
     ],
     "Reuben": [
         "流便",
-        88
+        27
     ],
     "Reuel": [
         "流珥",
-        10
+        3
     ],
     "Rezin": [
         "利汛",
-        11
+        7
     ],
     "Rhoda": [
         "罗大",
@@ -1070,55 +1070,55 @@ var BiblePersonsInfo =
     ],
     "Rizpah": [
         "利斯巴",
-        4
+        2
     ],
     "Romans": [
         "罗马人",
-        3
+        2
     ],
     "Rufus": [
         "鲁孚",
-        2
+        0
     ],
     "Ruth": [
         "路得",
-        22
+        17
     ],
     "Salome": [
         "撒罗米",
-        2
+        1
     ],
     "Samaritans": [
         "撒玛利亚人",
-        5
+        3
     ],
     "Samson": [
         "参孙",
-        40
+        25
     ],
     "Samuel": [
         "撒母耳",
-        144
+        104
     ],
     "Sanballat": [
         "参巴拉",
-        10
+        7
     ],
     "Sapphira": [
         "撒非喇",
-        1
+        0
     ],
     "Sarah": [
         "撒拉",
-        41
+        29
     ],
     "Saul": [
         "扫罗",
-        411
+        277
     ],
     "Sennacherib": [
         "西拿基立",
-        16
+        15
     ],
     "Sergius": [
         "Paulus 士求保罗",
@@ -1126,15 +1126,15 @@ var BiblePersonsInfo =
     ],
     "Seth": [
         "塞特",
-        10
+        5
     ],
     "Shadrach": [
         "沙得拉",
-        14
+        0
     ],
     "Shallum": [
         "沙龙",
-        26
+        16
     ],
     "Shamgar": [
         "珊迦",
@@ -1142,67 +1142,67 @@ var BiblePersonsInfo =
     ],
     "Shaul": [
         "扫罗",
-        11
+        7
     ],
     "Sheba": [
         "示巴女王",
-        41
+        29
     ],
     "Shem": [
         "闪",
-        110
+        5
     ],
     "Shemaiah": [
         "示玛雅",
-        40
+        21
     ],
     "Shimei": [
         "示每",
-        46
+        26
     ],
     "Shimeon": [
         "西缅",
-        1
+        0
     ],
     "Shua": [
         "书亚",
-        17
+        0
     ],
     "Shuah": [
         "书亚",
-        2
+        0
     ],
     "Shual": [
         "书亚",
-        6
+        0
     ],
     "Silas": [
         "西拉",
-        21
+        15
     ],
     "Simeon": [
         "西面",
-        52
+        22
     ],
     "Simon": [
         "西门",
-        78
+        55
     ],
     "Solomon": [
         "所罗门",
-        287
+        198
     ],
     "Sosthenes": [
         "所提尼",
-        2
+        1
     ],
     "Stephanas": [
         "司提反",
-        3
+        1
     ],
     "Stephen": [
         "司提反",
-        11
+        6
     ],
     "Syntyche": [
         "循都基",
@@ -1210,15 +1210,15 @@ var BiblePersonsInfo =
     ],
     "Tertius": [
         "德丢",
-        1
+        0
     ],
     "Tertullus": [
         "帖土罗",
-        2
+        1
     ],
     "Theophilus": [
         "提阿非罗",
-        2
+        0
     ],
     "Theudas": [
         "丢大",
@@ -1226,7 +1226,7 @@ var BiblePersonsInfo =
     ],
     "Thomas": [
         "多马",
-        11
+        7
     ],
     "Tiberius": [
         "提庇留",
@@ -1234,15 +1234,15 @@ var BiblePersonsInfo =
     ],
     "Timothy": [
         "提摩太",
-        25
+        15
     ],
     "Titus": [
         "提多",
-        14
+        9
     ],
     "Tola": [
         "陀拉",
-        8
+        2
     ],
     "Trophimus": [
         "特罗非摩",
@@ -1254,11 +1254,11 @@ var BiblePersonsInfo =
     ],
     "Tyrannus": [
         "推喇奴",
-        1
+        0
     ],
     "Uzziah": [
         "乌西雅",
-        29
+        17
     ]
 }
 
