@@ -8603,7 +8603,7 @@ var BiblePlacesInfo =
         ""
     ],
     [
-        "亞��",
+        "亞嫩",
         "Arnon",
         "Arnon",
         "亞嫩",
