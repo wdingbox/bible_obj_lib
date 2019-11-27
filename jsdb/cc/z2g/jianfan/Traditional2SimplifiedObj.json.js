@@ -1,3 +1,17 @@
+function Tradition2Simplified(str) {
+	var ret = "";
+	for (var i = 0; i < str.length; i++) {
+        var cha = str[i];
+		var sim = Tradition2SimplifiedObj[cha];
+		if (!sim) {
+			ret += cha;
+		} else {
+			ret += sim;
+		}
+	}
+	return ret;
+}
+
 var Tradition2SimplifiedObj = 
 {
     "19999": 20002,
@@ -6291,3 +6305,6 @@ var Tradition2SimplifiedObj =
     "罇": "樽",
     "鱒": "鳟"
 }
+
+
+
