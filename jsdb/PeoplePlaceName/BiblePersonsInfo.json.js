@@ -6,7 +6,7 @@
  // http://www.godcom.net/zhuti/51.htm
 
 
-var BiblePersonInfo = {
+var BiblePersonsInfo = {
  
 "Aaron": "亚伦",
 "Abdon": "押顿",
