@@ -6,7 +6,7 @@
  // http://www.godcom.net/zhuti/51.htm
 
 
-var CUVsen_PeopleZongYingDuiZhao = {
+var BiblePersonInfo = {
  
 "Aaron": "亚伦",
 "Abdon": "押顿",
