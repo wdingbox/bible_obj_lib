@@ -2553,7 +2553,7 @@ var BiblePlacesInfo =
         ""
     ],
     [
-        "烏���",
+        "烏瑪",
         "Ummah",
         "",
         "烏瑪",
