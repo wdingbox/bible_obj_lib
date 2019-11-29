@@ -109,7 +109,7 @@ var CUVsen=
             "19": " Lamech 娶了两个妻、一个名叫 Adah 、一个名叫 Zillah 。",
             "20": " Adah 生 Jabal 、 Jabal 就是住帐棚牧养牲畜之人的祖师。",
             "21": " Jabal 的兄弟名叫 Jubal ．他是一切弹琴吹箫之人的祖师。",
-            "22": " Zillah 又生了土八 Cain 、他是打造各样铜铁利器的、〔或作是铜匠铁匠的祖师〕土八 Cain 的妹子是 Naamah 。",
+            "22": " Zillah 又生了 Tubal-Cain 、他是打造各样铜铁利器的、〔或作是铜匠铁匠的祖师〕 Tubal-Cain 的妹子是 Naamah 。",
             "23": " Lamech 对他两个妻子说、 Adah 、 Zillah 、听我的声音、 Lamech 的妻子细听我的话语、壮年人伤我、我把他杀了、少年人损我、我把他害了．〔或作我杀壮士却伤自己我害幼童却损本身〕",
             "24": "若杀 Cain 、遭报七倍、杀 Lamech 、必遭报七十七倍。",
             "25": " Adam 又与妻子同房、他就生了一个儿子、起名叫 Seth 、意思说、　神另给我立了一个儿子代替 Abel 、因为 Cain 杀了他。",
