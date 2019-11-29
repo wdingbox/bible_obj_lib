@@ -4,7 +4,7 @@ var _bnotes=
         "1": {
             "1": "@test is ok22&nbsp;(Jhn1:1) (Jhn1:12)",
             "2": "Tws",
-            "3": "Ggtest",
+            "3": "1) Proverbs 8:30. 2) we plural 3) light is Jesus 4) spirit over water 1:2 and mat14:25",
             "4": "",
             "5": "",
             "6": "",
