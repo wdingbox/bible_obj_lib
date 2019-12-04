@@ -1499,7 +1499,7 @@ var CUVsen=
             "18": "这是 Laban 给他女儿 Leah 的婢女悉帕、从 James 所生的儿孙、共有十六人。",
             "19": " James 之妻 Rachel 的儿子是 Joseph 、和 Benjamin 。",
             "20": " Joseph 在 Egypt 地生了 Manasseh 和 Ephraim 、就是 On 的祭司 Poti-phera 的女儿 Asenath 给 Joseph 生的。",
-            "21": " Benjamin 的儿子是 Beeri 、 Becher 、 Ashbel 、 Chelal 、乃幔、 Ehi 、 Rosh 、 Muppim 、户平、 Ard ．",
+            "21": " Benjamin 的儿子是 Beeri 、 Becher 、 Ashbel 、 Chelal 、乃幔、 Ehi 、 Rosh 、 Muppim 、 Huppim 、 Ard ．",
             "22": "这是 Rachel 给 James 所生的儿孙、共有十四人。",
             "23": " Dan 的儿子是 Hushim 。",
             "24": " Naphtali 的儿子是 Jahzeel 、 Guni 、 Jezer 、 Shallum 。",
