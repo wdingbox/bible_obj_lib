@@ -108,7 +108,7 @@ for (var i = 0; i < CpObj_KeyAr.length; i++) {
     var catholicfubook = CpObj_KeyAr[i]
     var catholicbkname = catholicfubook.trim().toLowerCase()
     var bsnpbkCode = ""
-    Catholic2Bsnp[catholicbkname] = {};//CpObj[catholicfubook]
+    Catholic2Bsnp[catholicbkname] = "------------";//CpObj[catholicfubook]
     for (let bsnpbkid in BSNP_STD_BookCode) {
         var snam = BSNP_STD_BookCode[bsnpbkid][1].toLowerCase()
         if (catholicbkname === snam) {
@@ -116,7 +116,7 @@ for (var i = 0; i < CpObj_KeyAr.length; i++) {
             out_CpdvObj[bsnpbkid] = CpObj[catholicfubook]
             //delete CpObj[catholicbkname]
         }else{
-
+            //out_CpdvObj[catholicfubook] = CpObj[catholicfubook]
         }
     }
 
