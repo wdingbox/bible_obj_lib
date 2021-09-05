@@ -99,22 +99,24 @@ var TmpObj = JSON.parse(TmpMaxTxt)
 
 var txt = fs.readFileSync('../EntireBible_cpdv.json', 'utf-8')
 var CpObj = JSON.parse(txt)
-var Catholic_STD_BookCodeAry = Object.keys(CpObj)
+var CpObj_KeyAr = Object.keys(CpObj)
 
 
 //Catholic Public Domain Version 
-var Catholic2Bsnp={}
-for(var i=0;i<Catholic_STD_BookCodeAry.length;i++){
-    var catholicfubook = Catholic_STD_BookCodeAry[i]
+var Catholic2Bsnp = {}, CpdvObj = {}
+for (var i = 0; i < CpObj_KeyAr.length; i++) {
+    var catholicfubook = CpObj_KeyAr[i]
     var catholicbkname = catholicfubook.trim().toLowerCase()
-    var bsnpbkCode=""
-    Catholic2Bsnp[catholicbkname]="-------";//CpObj[catholicfubook]
-    for(let bsnpbkid in BSNP_STD_BookCode){
+    var bsnpbkCode = ""
+    Catholic2Bsnp[catholicbkname] = {};//CpObj[catholicfubook]
+    for (let bsnpbkid in BSNP_STD_BookCode) {
         var snam = BSNP_STD_BookCode[bsnpbkid][1].toLowerCase()
-        if(catholicbkname === snam){
+        if (catholicbkname === snam) {
             Catholic2Bsnp[catholicbkname] = bsnpbkid
-            CpObj[bsnpbkid] = CpObj[catholicbkname]
-            delete CpObj[catholicbkname]
+            CpdvObj[bsnpbkid] = CpObj[catholicfubook]
+            //delete CpObj[catholicbkname]
+        }else{
+            
         }
     }
 
@@ -126,10 +128,10 @@ for(var i=0;i<Catholic_STD_BookCodeAry.length;i++){
 
 
 console.log("total", Catholic2Bsnp)
-console.log(Catholic_STD_BookCodeAry)
+console.log(CpObj_KeyAr)
 console.log(BSNP_STD_BookCode)
 
-var str = JSON.stringify(CpObj, null, 4)
+var str = JSON.stringify(CpdvObj, null, 4)
 str = "var CPDV = \n" + str
 fs.writeFileSync("CPDV.json.js", str, "utf8")
 
