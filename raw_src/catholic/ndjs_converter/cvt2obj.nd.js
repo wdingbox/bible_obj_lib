@@ -103,7 +103,7 @@ var CpObj_KeyAr = Object.keys(CpObj)
 
 
 //Catholic Public Domain Version 
-var Catholic2Bsnp = {}, CpdvObj = {}
+var Catholic2Bsnp = {}, out_CpdvObj = {}
 for (var i = 0; i < CpObj_KeyAr.length; i++) {
     var catholicfubook = CpObj_KeyAr[i]
     var catholicbkname = catholicfubook.trim().toLowerCase()
@@ -113,10 +113,10 @@ for (var i = 0; i < CpObj_KeyAr.length; i++) {
         var snam = BSNP_STD_BookCode[bsnpbkid][1].toLowerCase()
         if (catholicbkname === snam) {
             Catholic2Bsnp[catholicbkname] = bsnpbkid
-            CpdvObj[bsnpbkid] = CpObj[catholicfubook]
+            out_CpdvObj[bsnpbkid] = CpObj[catholicfubook]
             //delete CpObj[catholicbkname]
         }else{
-            
+
         }
     }
 
@@ -131,7 +131,7 @@ console.log("total", Catholic2Bsnp)
 console.log(CpObj_KeyAr)
 console.log(BSNP_STD_BookCode)
 
-var str = JSON.stringify(CpdvObj, null, 4)
+var str = JSON.stringify(out_CpdvObj, null, 4)
 str = "var CPDV = \n" + str
-fs.writeFileSync("CPDV.json.js", str, "utf8")
+fs.writeFileSync("out_CPDV.json.js", str, "utf8")
 
