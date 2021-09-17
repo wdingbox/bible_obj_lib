@@ -1,3 +1,5 @@
+//see github wdingsoft
+
 const BkID_to_AudioName = {
     "Gen": ['Genesis', 'genesis', '创世纪',],
     "Exo": ['Exodus', 'exodus', '出埃及记',],
