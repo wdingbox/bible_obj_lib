@@ -29,13 +29,14 @@ function cal_relativePosi(bname) {
                         }
                     }
                     //cal relative posi for each verse.
-                    var vrslen = 0, relativePos = 0;
+                    var vrslen = 0;
                     for (let Vrs in biObj[Bk][Chp]) {
                         if (biObj[Bk][Chp].hasOwnProperty(Vrs)) {
-                            relativePos = vrslen / vrslenTot
+                            var relativePos = vrslen / vrslenTot
                             console.log(Bk, Chp, Vrs, relativePos, biObj[Bk][Chp][Vrs]);
                             vrslen += biObj[Bk][Chp][Vrs].length
-                            biObj[Bk][Chp][Vrs] = relativePos
+                            var relativeLen = biObj[Bk][Chp][Vrs].length / vrslenTot
+                            biObj[Bk][Chp][Vrs] = [relativePos, relativeLen]
                         }
                     }
                 }
@@ -43,8 +44,8 @@ function cal_relativePosi(bname) {
         }
     }
 
-    var out = `var ${bname}=\n` + JSON.stringify(biObj, null, 4)
-    fs.writeFileSync(`../${bname}.json.js`, out, "utf8");
+    var out = `var VrsAudioRelativePosLen_${bname}=\n` + JSON.stringify(biObj, null, 4)
+    fs.writeFileSync(`../VrsAudioRelativePosLen_${bname}.json.js`, out, "utf8");
 
     return
 }
