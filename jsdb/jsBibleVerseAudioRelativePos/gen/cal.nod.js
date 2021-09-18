@@ -36,7 +36,7 @@ function cal_relativePosi(bname) {
                             console.log(Bk, Chp, Vrs, relativePos, biObj[Bk][Chp][Vrs]);
                             vrslen += biObj[Bk][Chp][Vrs].length
                             var relativeLen = biObj[Bk][Chp][Vrs].length / vrslenTot
-                            biObj[Bk][Chp][Vrs] = [relativePos.toFixed(2), relativeLen.toFixed(2)]
+                            biObj[Bk][Chp][Vrs] = [relativePos.toFixed(4), relativeLen.toFixed(4)]
                         }
                     }
                 }
