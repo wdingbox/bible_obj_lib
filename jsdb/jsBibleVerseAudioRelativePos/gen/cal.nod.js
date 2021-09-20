@@ -22,7 +22,7 @@ function cal_relativePosi(bname) {
 
                     var chapterStarter = BkID_to_AudioName[Bk][1] + Chp
                     //cal tot len;
-                    var vrslenTot = chapterStarter.length;
+                    var vrslenTot = 0;
                     for (let Vrs in biObj[Bk][Chp]) {
                         if (biObj[Bk][Chp].hasOwnProperty(Vrs)) {
                             vrslenTot += biObj[Bk][Chp][Vrs].length
