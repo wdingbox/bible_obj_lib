@@ -1,56 +1,3 @@
-function Traditional2Symplified_Char(c){
-  var chcod = c.charCodeAt(0);//english ascii. not chinese.
-  if(chcod<255) return c;
-  
-  var ifnd=0;
-  var others="",grp="";
-  var i=0;
-  for(i=0;i<GR.length;i++){
-    var isrch=GR[i].search(c);
-    if(undefined==isrch || isrch<0) continue;
-    ifnd+=1;
-    //alert(isrch);
-    return GR[i][0];
-  }
-  if(ifnd>1) alert("Traditional not found:"+c);
-  if(0==grp.length) grp=c;
-  return c;
-}
-
-
-function Traditional2Symplified_Strn(cstr){
-  var ret="";
-  for(var i=0;i<cstr.length;i++){
-    var c = cstr[i];
-    ret += Traditional2Symplified_Char(c);
-  }
-  return ret;
-}
-
-
-
-function jian_fan_group_GetGroup(c){
-  var chcod = c.charCodeAt(0);//english ascii. not chinese.
-  if(chcod<255) return c;
-  
-  var ifnd=0;
-  var others="",grp="";
-  var i=0;
-  for(i=0;i<GR.length;i++){
-    var isrch=GR[i].search(c);
-    if(undefined==isrch || isrch<0) continue;
-    ifnd+=1;
-    grp += GR[i];
-  }
-  if(ifnd>1) alert("GR data Error.");
-  if(0==grp.length) grp=c;
-  return grp;
-}
-function jian_fan_group_GetOpositeOf(c){
-  var grp=jian_fan_group_GetGroup(c);
-  if(grp.length>1) grp=grp.replace(c,"");
-  return grp;
-}
 var GR=new Array();
 GR[0]="锕錒";
 GR[1]="锿鎄";
@@ -406,7 +353,7 @@ GR[350]="祷禱";
 GR[351]="焘燾";
 GR[352]="盗盜";
 GR[353]="锝鍀";
-GR[354]="德悳";
+GR[354]="德徳悳";
 GR[355]="灯燈";
 GR[356]="邓鄧";
 GR[357]="凳櫈";
