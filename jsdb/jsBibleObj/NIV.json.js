@@ -33399,8 +33399,8 @@ var NIV=
       "17": "Then the dragon was enraged at the woman and went off to make war against the rest of her offspring -- those who obey God's commandments and hold to the testimony of Jesus."
     },
     "13": {
-      "1": "And the dragon stood on the shore of the sea.",
-      "2": "And I saw a beast coming out of the sea. He had ten horns and seven heads, with ten crowns on his horns, and on each head a blasphemous name. The beast I saw resembled a leopard, but had feet like those of a bear and a mouth like that of a lion. The dragon gave the beast his power and his throne and great authority.",
+      "1": "And the dragon stood on the shore of the sea.And I saw a beast coming out of the sea. He had ten horns and seven heads, with ten crowns on his horns, and on each head a blasphemous name. ",
+      "2": "The beast I saw resembled a leopard, but had feet like those of a bear and a mouth like that of a lion. The dragon gave the beast his power and his throne and great authority.",
       "3": "One of the heads of the beast seemed to have had a fatal wound, but the fatal wound had been healed. The whole world was astonished and followed the beast.",
       "4": "Men worshiped the dragon because he had given authority to the beast, and they also worshiped the beast and asked, \"Who is like the beast? Who can make war against him?\"",
       "5": "The beast was given a mouth to utter proud words and blasphemies and to exercise his authority for forty-two months.",
