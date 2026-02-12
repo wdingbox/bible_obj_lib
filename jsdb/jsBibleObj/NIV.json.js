@@ -14983,7 +14983,7 @@ var NIV=
       "5": "The arrogant cannot stand in your presence; you hate all who do wrong.",
       "6": "You destroy those who tell lies; bloodthirsty and deceitful men the Lord abhors.",
       "7": "But I, by your great mercy, will come into your house; in reverence will I bow down toward your holy temple.",
-      "8": "Lead me, O Lord , in your righteousness because of my enemiesmake straight your way before me.",
+      "8": "Lead me, O Lord , in your righteousness because of my enemies make straight your way before me.",
       "9": "Not a word from their mouth can be trusted; their heart is filled with destruction. Their throat is an open grave; with their tongue they speak deceit.",
       "10": "Declare them guilty, O God! Let their intrigues be their downfall. Banish them for their many sins, for they have rebelled against you.",
       "11": "But let all who take refuge in you be glad; let them ever sing for joy. Spread your protection over them, that those who love your name may rejoice in you.",
